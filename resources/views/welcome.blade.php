@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-sm-7" style="padding-top: 181px;">
                 <div class="searchbox">
-                    <h1 class="h1-secOne">UPGRADE YOURSELFfffF</h1>
+                    <h1 class="h1-secOne">UPGRADE YOURSELF</h1>
                     <h1 class="h1-secOne" style="padding-bottom: 8px;">WITH US!</h1>
                     <h3 class="h3-secOne">Find your favorite event for upgrading your</h3>
                     <h3 class="h3-secOne" style="padding-bottom: 50px;">skill</h3>
