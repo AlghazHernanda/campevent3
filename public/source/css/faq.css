@@ -1,0 +1,182 @@
+h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+  }
+  
+  h2 {
+    font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  }
+  
+  h3 {
+    font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  }
+  
+  h4 {
+    font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  }
+  
+  h5 {
+    font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  }
+  
+  h6 {
+    font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  }
+  
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+  }
+  
+  h1, h2, h3, h4, p {
+    margin: 0;
+  }
+  
+  body {
+    background-color: #FFFBE9;
+  }
+  
+  .faq{
+    margin-top: 122px;
+  }
+  
+  .col-sm-6 i{
+    font-size:32px;
+    padding-right:132px;
+  }
+  
+  .container button {
+    text-decoration: none;
+    background-color: #FFFBE9 ;
+    border:none;
+    outline: none;
+  }
+  
+  #accordionExample{
+    padding-left: 132px;
+    padding-right: 132px;
+    padding-top: 80px;
+    padding-bottom: 170px;
+  }
+  
+  #accordionExample .accordion-item{
+    background-color: #FFFBE9;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    border: 0px;
+    padding-bottom: 25px;
+  }
+  
+  #accordionExample .accordion-button{
+    background-color: #FFFBE9;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  #sectionFive{
+    background: url('https://telegra.ph/file/f32d6a5c66cc206a01b7a.jpg');
+    background-size: cover;                   
+    background-repeat: no-repeat;
+    height: 360px;
+    background-position: center;
+  }
+  
+  #sectionFive .col-sm-12{
+    padding-top: 33px;
+    padding-left: 225px;
+    padding-right: 225px;
+  }
+  
+  #sectionFive .notif{
+    width: 991px;
+    height: 259px;
+    background: #F8D7DA;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+  }
+  
+  #sectionFive .capt-secFive{
+    padding-top: 40px;
+    padding-left: 96px;
+    padding-right: 96px;
+  }
+  
+  #sectionFive .h2-secFive{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.01em;
+    color: #000000;
+  }
+  
+  #sectionFive .h4-secFive{
+    padding-top: 5px;
+    padding-bottom: 27px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #000000;
+  }
+  
+  #sectionFive .btn-1{
+    width: 256px;
+    height: 43px;
+    background: #CEAB93;
+    border-radius: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+  }
+  
+  #sectionFive .btn-1:hover{
+    background-color:#AD8B73;
+  }
+  
+  #sectionFive .col-sm-4{
+    padding-top: 49px;
+  }
+  
+  #sectionFive .img-section5{
+    width: 162px;
+    height: 162px;
+  }
+  
