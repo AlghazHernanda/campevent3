@@ -27,8 +27,8 @@
                                     <div class="col">
                                         <div class="rounded mb-3 mb-md-0" style="padding-top: 28px;">
                                             <div class="image">
-                                                <img class="rounded-circle img-preview img-fluid" src="bariz1.png"
-                                                    width="120" height="120px">
+                                                {{-- <img class="rounded-circle img-preview img-fluid" src="bariz1.png"
+                                                    width="120" height="120px"> --}}
                                                 <input type="hidden" name="oldImage" value="{{ auth()->user()->image }}">
                                             </div>
                                         </div>
