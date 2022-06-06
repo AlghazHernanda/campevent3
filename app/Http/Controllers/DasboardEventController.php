@@ -120,7 +120,7 @@ class DasboardEventController extends Controller
      */
     public function edit(Event $event)
     {
-        return view('coba_backend.editEvent', [
+        return view('editEvent', [
             'event' => $event,
             'eventTypes' => EventType::all()
         ]);
