@@ -46,7 +46,7 @@
                            
                      
                             <div class="col-sm-12">
-                              <button class="btn btn-register">Register your event</button>
+                              <button class="btn btn-register">Accept event</button>
                              </div>
                   </div>
                </div>
