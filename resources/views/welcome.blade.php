@@ -1,5 +1,19 @@
 @extends('layouts.home') {{-- ini memanggil file main yang di dalam layout --}}
 @section('landing')
+    @php
+    function convertDateDBtoIndo($string)
+    {
+        // contoh : 2019-01-30
+
+        $bulanIndo = ['', 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+
+        $tanggal = explode('-', $string)[2];
+        $bulan = explode('-', $string)[1];
+        $tahun = explode('-', $string)[0];
+
+        return $tanggal . ' ' . $bulanIndo[abs($bulan)] . ' ' . $tahun;
+    }
+    @endphp
     <div id="sectionOne">
         <div class="row">
             <div class="col-sm-7" style="padding-top: 181px;">
@@ -12,12 +26,13 @@
                 <div class="row">
                     <div class="form-outline col-sm-5">
                         <form action="/listevent">
-                        <input type="search" id="#" class="form-control"  name="search" value="{{ request('search') }}"  placeholder="Search your favorite event"
-                            aria-label="Search" />
+                            <input type="search" id="#" class="form-control" name="search"
+                                value="{{ request('search') }}" placeholder="Search your favorite event"
+                                aria-label="Search" />
                     </div>
                     <div class="col-sm">
                         <button class="btn btn-1" type="submit">Search</button>
-                    </form>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -91,241 +106,122 @@
                 <h1 style="padding-bottom: 20px;">Upcoming Event</h1>
                 <h3 class="h3-secThree">Don’t worry, you can attend the nearest event by our recomendations</h3>
             </div>
-            <div class="col-sm-3">
-                <a href="#" style="padding-right: 40px;"><button class="btn btn-1" data-bs-target="#demo"
-                        data-bs-slide="prev"><i class="bi bi-arrow-left"></i></button></a>
-                <a href="#"><button class="btn btn-1" data-bs-target="#demo" data-bs-slide="next"><i
-                            class="bi bi-arrow-right"></i></button></a>
-            </div>
         </div>
-        <!-- Carousel -->
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-            <!-- Indicators/dots -->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-            </div>
-
-            <!-- The slideshow/carousel -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row" style="padding-top: 38px;">
-                        @foreach ($events as $event)
-                        <div class="col">
-                            <div class="card">
-                                <div class="photo">
-                                    <img src="/source/img/ifest.png" class="ifest" alt=" " />
-                                    <div class="row text-card">
-                                        <div class="col status-card">Paid</div>
-                                        <div class="col info-card">online</div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm">
-                                            <p class="bi bi-calendar-date"> 29 Oct 2021 </p>
-                                        </div>
-                                        <div class="col-sm">
-                                            <p class="bi bi-person-circle"> Roisyal </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <a href="#"><button class="btn btn-card">See Details</button></a>
-                                    </div>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            @foreach ($events as $event)
+                @if ($event->status === 'accepted')
+                    <div class="col">
+                        <div class="card">
+                            <div class="photo">
+                                <img src="{{url("/images/{$event->image}")}}" class="ifest" alt=" " />
+                                <div class="row text-card">
+                                    @for ($i = 0; $i < 2; $i++)
+                                        <div class="col status-card">{{ $event->eventTheme[$i] }}</div>
+                                    @endfor
                                 </div>
                             </div>
-                        </div>
-                        @endforeach
-
-                        {{-- <div class="col">
-                            <div class="card">
-                                <div class="photo">
-                                    <img src="/source/img/ifest.png" class="ifest" alt=" " />
-                                    <div class="row text-card">
-                                        <div class="col status-card">Paid</div>
-                                        <div class="col info-card">online</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <p class="bi bi-calendar-date">{{ convertDateDBtoIndo($event->date) }}</p>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <p class="bi bi-person-circle"> {{ $event->author->fullname }} </p>
                                     </div>
                                 </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm">
-                                            <p class="bi bi-calendar-date"> 29 Oct 2021 </p>
-                                        </div>
-                                        <div class="col-sm">
-                                            <p class="bi bi-person-circle"> Roisyal </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <a href="#"><button class="btn btn-card">See Details</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <div class="photo">
-                                    <img src="/source/img/ifest.png" class="ifest" alt=" " />
-                                    <div class="row text-card">
-                                        <div class="col status-card">Paid</div>
-                                        <div class="col info-card">online</div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm">
-                                            <p class="bi bi-calendar-date"> 29 Oct 2021 </p>
-                                        </div>
-                                        <div class="col-sm">
-                                            <p class="bi bi-person-circle"> Roisyal </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <a href="#"><button class="btn btn-card">See Details</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <div class="photo">
-                                    <img src="/source/img/ifest.png" class="ifest" alt=" " />
-                                    <div class="row text-card">
-                                        <div class="col status-card">Paid</div>
-                                        <div class="col info-card">online</div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm">
-                                            <p class="bi bi-calendar-date"> 29 Oct 2021 </p>
-                                        </div>
-                                        <div class="col-sm">
-                                            <p class="bi bi-person-circle"> Roisyal </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <a href="#"><button class="btn btn-card">See Details</button></a>
-                                    </div>
+                                <div class="col-sm-12">
+                                    <a href="/eventdetail/{{ $event->id }}"><button class="btn btn-card">See
+                                            Details</button></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="carousel-item">
-                    <div class="row" style="padding-top: 38px;">
-                        <div class="col">
-                            <div class="card">
-                                <div class="photo">
-                                    <img src="/source/img/ifest.png" class="ifest" alt=" " />
-                                    <div class="row text-card">
-                                        <div class="col status-card">Paid</div>
-                                        <div class="col info-card">online</div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm">
-                                            <p class="bi bi-calendar-date"> 29 Oct 2021 </p>
-                                        </div>
-                                        <div class="col-sm">
-                                            <p class="bi bi-person-circle"> Roisyal </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <a href="#"><button class="btn btn-card">See Details</button></a>
-                                    </div>
-                                </div>
+                    {{-- <div class="col">
+                <div class="card">
+                    <div class="photo">
+                        <img src="/source/img/ifest.png" class="ifest" alt=" " />
+                        <div class="row text-card">
+                            <div class="col status-card">Paid</div>
+                            <div class="col info-card">online</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm">
+                                <p class="bi bi-calendar-date"> 29 Oct 2021 </p>
+                            </div>
+                            <div class="col-sm">
+                                <p class="bi bi-person-circle"> Roisyal </p>
                             </div>
                         </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <div class="photo">
-                                    <img src="/source/img/ifest.png" class="ifest" alt=" " />
-                                    <div class="row text-card">
-                                        <div class="col status-card">Paid</div>
-                                        <div class="col info-card">online</div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm">
-                                            <p class="bi bi-calendar-date"> 29 Oct 2021 </p>
-                                        </div>
-                                        <div class="col-sm">
-                                            <p class="bi bi-person-circle"> Roisyal </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <a href="#"><button class="btn btn-card">See Details</button></a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-sm-12">
+                            <a href="#"><button class="btn btn-card">See Details</button></a>
                         </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <div class="photo">
-                                    <img src="/source/img/ifest.png" class="ifest" alt=" " />
-                                    <div class="row text-card">
-                                        <div class="col status-card">Paid</div>
-                                        <div class="col info-card">online</div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm">
-                                            <p class="bi bi-calendar-date"> 29 Oct 2021 </p>
-                                        </div>
-                                        <div class="col-sm">
-                                            <p class="bi bi-person-circle"> Roisyal </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <a href="#"><button class="btn btn-card">See Details</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="card">
-                                <div class="photo">
-                                    <img src="/source/img/ifest.png" class="ifest" alt=" " />
-                                    <div class="row text-card">
-                                        <div class="col status-card">Paid</div>
-                                        <div class="col info-card">online</div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm">
-                                            <p class="bi bi-calendar-date"> 29 Oct 2021 </p>
-                                        </div>
-                                        <div class="col-sm">
-                                            <p class="bi bi-person-circle"> Roisyal </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <a href="#"><button class="btn btn-card">See Details</button></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
                     </div>
                 </div>
             </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="photo">
+                        <img src="/source/img/ifest.png" class="ifest" alt=" " />
+                        <div class="row text-card">
+                            <div class="col status-card">Paid</div>
+                            <div class="col info-card">online</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm">
+                                <p class="bi bi-calendar-date"> 29 Oct 2021 </p>
+                            </div>
+                            <div class="col-sm">
+                                <p class="bi bi-person-circle"> Roisyal </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <a href="#"><button class="btn btn-card">See Details</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="photo">
+                        <img src="/source/img/ifest.png" class="ifest" alt=" " />
+                        <div class="row text-card">
+                            <div class="col status-card">Paid</div>
+                            <div class="col info-card">online</div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm">
+                                <p class="bi bi-calendar-date"> 29 Oct 2021 </p>
+                            </div>
+                            <div class="col-sm">
+                                <p class="bi bi-person-circle"> Roisyal </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <a href="#"><button class="btn btn-card">See Details</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div> --}}
+                @endif
+            @endforeach
         </div>
-        <div class="col-sm-12" style="padding-top: 99px;">
+
+        <div class="col-sm-12" style="padding-top: 70px;">
             <a href="/listevent"><button class="btn btn-3">Explore All Events</button></a>
         </div>
     </div>
-
-
     <!-- Section 4 -->
     <div id="sectionFour">
         <div class="row">
@@ -349,7 +245,8 @@
                     <div class="capt-secFive col-sm-8">
                         <h2 class="h2-secFive">Is there any problem</h2>
                         <h2 class="h2-secFive">issue?</h2>
-                        <h4 class="h4-secFive">Don’t worry, we have 24/7 customer service for you to solve your problem
+                        <h4 class="h4-secFive">Don’t worry, we have 24/7 customer service for you to solve your
+                            problem
                         </h4>
                         <a href="/contact"><button class="btn btn-1">Contact Us</button></a>
                     </div>
