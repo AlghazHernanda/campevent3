@@ -5,7 +5,7 @@
 ## There are various implementations on this website, namely:
 - **Login and Registration Logic and Page** 
  
-- **CRUD(Create, Read, Update, Delete) for Event **
+- **CRUD(Create, Read, Update, Delete) for Event**
    
 - **Data Validation** 
    
