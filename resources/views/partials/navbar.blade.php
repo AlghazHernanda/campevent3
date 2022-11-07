@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg" id="Navbar">
-    <div class="col-md-6">
+    <div class="container-fluid">
         <a class="navbar-brand" href="/"><img class="logo" src="/source/img/logo.png"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -9,14 +9,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-                {{-- di bawah ini memakai operator ternary, jadi jika title = home, maka tambahkan kelas active, kalau engga kasih string kosong --}}
                 <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/listevent">Event</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/about">About Us</a>
+                <a class="nav-link" style="width: 90px" href="/about">About Us</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/faq">FAQ</a>
@@ -29,8 +28,8 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                         aria-expanded="false" id="navbarDropdownMenuLink">
-                        <img class="rounded-circle" src="{{url("/images/" . auth()->user()->image)}}"  width="40" height="40px">
-                        {{-- src="{{ asset('storage/' . auth()->user()->image) }}" --}}
+                        <img class="rounded-circle" src="{{ asset('storage/' . auth()->user()->image) }}" width="40"
+                            height="40px">
                         {{-- {{ asset('storage/' . $event->image) }} --}}
                         {{ auth()->user()->fullname }}
                     </a>
