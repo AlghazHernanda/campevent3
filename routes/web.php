@@ -54,6 +54,11 @@ Route::get('dashboard', function () {
     return view('dashboard');
 });
 
+//Payment
+Route::get('payment', function () {
+    return view('payment');
+});
+
 //request event
 // Route::get('requestevent', function () {
 //     return view('requestevent');

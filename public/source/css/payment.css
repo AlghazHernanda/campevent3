@@ -1,0 +1,69 @@
+h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+}
+
+h6{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+}
+
+p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    margin-bottom: 0px;
+}
+
+.tatacara{
+    background-color: #008E89;
+}
+
+.text-beige{
+    color: #E0DDAA;
+}
+
+.peserta{
+    margin-left: 170px;
+    margin-right: 170px;
+    color: white;
+}
+
+.rekening{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+}
+
+.pembayaran{
+    margin-left: 170px;
+    margin-right: 170px;
+}
+
+.btn{
+    background-color: #F7CC74;
+    color: white;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.tombol{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 30px;
+}
