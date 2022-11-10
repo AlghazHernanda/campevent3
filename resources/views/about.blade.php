@@ -11,8 +11,8 @@
     <div>
         <div style="text-align:center; padding-bottom: 86px;">
             <div class="col-sm-12">
-                <h3 style="color:  #bfbfbf;">We build this project using our care and awareness. We care about the stability of event in indonesia. Together we</h3>
-                <h3 style="color:  #bfbfbf;">change the future!</h3>
+                <h3 style="color:  #bfbfbf;">We build this project using our care and awareness. We care about the stability of event in indonesia</h3>
+                <h3 style="color:  #bfbfbf;"> Together we can change the future!</h3>
             </div>
         </div>
     </div>
@@ -83,10 +83,34 @@
             <div class="col-sm-6">
                 <div>
                     <div class="d-flex">
-                        <div class="image"> <img src="/source/img/maul1.png" width="360"> </div>
+                        <div class="image"> <img src="/source/img/anki1.png" width="360"> </div>
                     </div>
                 </div>
             </div>
+            <div class="col-sm-6">
+                <div>
+                    <div class="d-flex flex-column">
+                        <div>
+                            <div class="p-2">
+                                <h2>Anki Prawira Hidayat</h2>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: #bfbfbf;">Front-end & QA Engineer</p>
+                            </div>
+                            <div class="p-2">
+                                <p style="color: black;">Anki is responsible to implement design to the website and also responsible to test and maintain the quality of CampEvent.</p>
+                            </div>
+                            <div class="p-2"><a class="btn btn-primary" href="#" role="button">
+                                    <p class="bi bi-linkedin"> Anki's Linkedin</p>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="padding-bottom: 100px;">
+        <div class="row">
             <div class="col-sm-6">
                 <div>
                     <div class="d-flex flex-column">
@@ -107,10 +131,24 @@
                     </div>
                 </div>
             </div>
+            <div class="col-sm-6">
+                <div>
+                    <div class="d-flex">
+                        <div class="image"> <img src="/source/img/maul1.png" width="360" style="margin-left: 192px;"> </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="container" style="padding-bottom: 100px;">
         <div class="row">
+            <div class="col-sm-6">
+                <div>
+                    <div class="d-flex">
+                        <div class="image"> <img src="/source/img/almer1.png" width="360"> </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-sm-6">
                 <div>
                     <div class="d-flex flex-column">
@@ -131,24 +169,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <div>
-                    <div class="d-flex">
-                        <div class="image"> <img src="/source/img/almer1.png" width="360" style="margin-left: 192px;"> </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     <div class="container" style="padding-bottom: 100px;">
         <div class="row">
-            <div class="col-sm-6">
-                <div>
-                    <div class="d-flex">
-                        <div class="image"> <img src="/source/img/alghaz1.png" width="360"> </div>
-                    </div>
-                </div>
-            </div>
             <div class="col-sm-6">
                 <div>
                     <div class="d-flex flex-column">
@@ -166,6 +190,13 @@
                                     <p class="bi bi-linkedin"> Alghaz's Linkedin</p>
                                 </a></div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div>
+                    <div class="d-flex">
+                        <div class="image"> <img src="/source/img/alghaz1.png" width="360" style="margin-left: 192px;"> </div>
                     </div>
                 </div>
             </div>
