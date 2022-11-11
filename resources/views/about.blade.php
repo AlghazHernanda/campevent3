@@ -116,16 +116,16 @@
                     <div class="d-flex flex-column">
                         <div>
                             <div class="p-2">
-                                <h2>Farhan Maulana Alief</h2>
+                                <h2>Mohamad Alghaz Hernanda</h2>
                             </div>
                             <div class="p-2">
-                                <p style="color: #bfbfbf;">Front-end Engineer</p>
+                                <p style="color: #bfbfbf;">Back-end Engineer</p>
                             </div>
                             <div class="p-2">
-                                <p style="color: black;">Farhan is responsible to implement the high fidelity design with the code. Start from using HTML and the CSS for the styling.</p>
+                                <p style="color: black;">Alghaz is responsible to make an algorithm for this website. Using Laravel for the framework, Almer with Alghaz work together.</p>
                             </div>
                             <div class="p-2"><a class="btn btn-primary" href="#" role="button">
-                                    <p class="bi bi-linkedin"> Farhan's Linkedin</p>
+                                    <p class="bi bi-linkedin"> Alghaz's Linkedin</p>
                                 </a></div>
                         </div>
                     </div>
@@ -134,7 +134,7 @@
             <div class="col-sm-6">
                 <div>
                     <div class="d-flex">
-                        <div class="image"> <img src="/source/img/maul1.png" width="360" style="margin-left: 192px;"> </div>
+                        <div class="image"> <img src="/source/img/alghaz1.png" width="360" style="margin-left: 192px;"> </div>
                     </div>
                 </div>
             </div>
@@ -166,37 +166,6 @@
                                     <p class="bi bi-linkedin"> Almer's Linkedin</p>
                                 </a></div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container" style="padding-bottom: 100px;">
-        <div class="row">
-            <div class="col-sm-6">
-                <div>
-                    <div class="d-flex flex-column">
-                        <div>
-                            <div class="p-2">
-                                <h2>Mohamad Alghaz Hernanda</h2>
-                            </div>
-                            <div class="p-2">
-                                <p style="color: #bfbfbf;">Back-end Engineer</p>
-                            </div>
-                            <div class="p-2">
-                                <p style="color: black;">Alghaz is responsible to make an algorithm for this website. Using Laravel for the framework, Almer with Alghaz work together.</p>
-                            </div>
-                            <div class="p-2"><a class="btn btn-primary" href="#" role="button">
-                                    <p class="bi bi-linkedin"> Alghaz's Linkedin</p>
-                                </a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div>
-                    <div class="d-flex">
-                        <div class="image"> <img src="/source/img/alghaz1.png" width="360" style="margin-left: 192px;"> </div>
                     </div>
                 </div>
             </div>
