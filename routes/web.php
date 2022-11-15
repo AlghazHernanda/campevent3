@@ -7,6 +7,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\auth\ForgotPasswordController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DasboardEventController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\WhistlistController;
 use App\Http\Controllers\WishlistController;
 
@@ -124,6 +125,10 @@ Route::get('/eventadmin/{event:id}', [AdminDashboardController::class, 'show'])-
 //contact us
 Route::get('/contact', [ContactController::class, 'index']);
 Route::post('/contact', [ContactController::class, 'store']);
+
+//payment
+Route::get('/payment', [PaymentController::class, 'index']);
+
 
 //My Event
 // Route::get('myevent', function () {

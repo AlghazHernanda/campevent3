@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Payment extends Model
 {
     use HasFactory;
+    // biar gapake fillable, ini artinya cuma id doang yg gaboleh di masukin mass assigment
+    protected $guarded = ['id'];
 }
