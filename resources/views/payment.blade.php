@@ -15,6 +15,7 @@
     </div>
     <div class="pembayaran">
         <form class="card-form pt-5" method="post" action="/profile" enctype="multipart/form-data">
+            @csrf
             <div class="form-login mb-4">
                 <label for="#" class="form-label">
                     <h6 class="h6-form">1. Nama Lengkap</h6>
