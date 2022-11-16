@@ -26,17 +26,21 @@ return $tanggal . ' ' . $bulanIndo[abs($bulan)] . ' ' . $tahun;
                     <th>Tiket yang dibeli</th>
                     <th>Email</th>
                     <th>Bukti Pembayaran</th>
+                    <th>status</th>
                     <th>Action</th>
                 </tr>
             </thead>
-            {{--@foreach ($events as $event)--}}
+            @foreach ($payments as $payment)
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Bariz</td>
-                    <td>IFEST 2022</td>
-                    <td>bariz.racing@gmail.com</td>
-                    <td><a href="#">Screenshot-12.jpg</a></td>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $payment->name }}</td>
+                    <td>{{ $payment->event_title }}</td>
+                    <td>{{ $payment->email }}</td>
+                    {{-- untuk stagging --}}
+                    <td><img src="{{ asset('storage/' . $payment->image) }}" class=""
+                        alt=" " /></td>
+                    <td>{{ $payment->status }}</td>
                     <td>
                         <div class="action row">
                             <div class="col-sm">
@@ -53,7 +57,7 @@ return $tanggal . ' ' . $bulanIndo[abs($bulan)] . ' ' . $tahun;
                     </td>
                 </tr>
             </tbody>
-            {{--@endforeach--}}
+            @endforeach
         </table>
 
     </div>

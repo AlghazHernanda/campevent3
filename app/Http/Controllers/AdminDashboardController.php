@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Contact;
 use App\Models\Event;
 use App\Models\EventType;
+use App\Models\Payment;
 use Illuminate\Http\Request;
 
 class AdminDashboardController extends Controller
@@ -31,7 +32,10 @@ class AdminDashboardController extends Controller
     }
     public function requestpayment()
     {
-        return view('requestpayment', []);
+        return view('requestpayment', [
+            'payments' => Payment::all(), //dimana user_id nya sama kyk user id yang login
+
+        ]);
     }
 
     /**

@@ -21,6 +21,7 @@ class CreatePaymentsTable extends Migration
             $table->string('image')->nullable();
             $table->string('email');
             $table->string('rekening');
+            $table->string('status')->default("waiting");
             $table->timestamps();
         });
     }
