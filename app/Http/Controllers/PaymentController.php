@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Payment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Models\Event;
 
 class PaymentController extends Controller
 {
@@ -33,7 +34,7 @@ class PaymentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Event $event)
     {
         $validatedData = $request->validate([
             'name' => 'required|max:255',
@@ -45,7 +46,7 @@ class PaymentController extends Controller
 
         ]);
 
-        $validatedData['rekening'] = "1345466";
+        $validatedData['rekening'] = "4123778583775834";
         $validatedData['user_id'] = auth()->user()->id;
 
         //untuk stagging, sebelum deploy
@@ -53,11 +54,11 @@ class PaymentController extends Controller
             $validatedData['image'] = $request->file('image')->store('post-images'); //maka simpan di dalam storage/app/post-images
         }
 
-        dd($validatedData);
+        //dd($validatedData);
 
-        // Payment::create($validatedData);
+        Payment::create($validatedData);
 
-        // return redirect('/myevent')->with('success', 'New Event has Been Added');
+        return redirect('/')->with('success', 'New Event has Been Added');
     }
 
     /**
