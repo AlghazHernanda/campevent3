@@ -29,6 +29,10 @@ class AdminDashboardController extends Controller
             'contact' => Contact::all(),
         ]);
     }
+    public function requestpayment()
+    {
+        return view('requestpayment', []);
+    }
 
     /**
      * Show the form for creating a new resource.
