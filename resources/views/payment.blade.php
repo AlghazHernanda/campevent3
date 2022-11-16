@@ -14,25 +14,44 @@
         </div>
     </div>
     <div class="pembayaran">
-        <form class="card-form pt-5" method="post" action="/profile" enctype="multipart/form-data">
+        <form action="/payment" method="post" class="card-form pt-5" enctype="multipart/form-data">
             @csrf
             <div class="form-login mb-4">
                 <label for="#" class="form-label">
                     <h6 class="h6-form">1. Nama Lengkap</h6>
                 </label>
-                <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Masukkan nama lengkap">
+                <input type="text" class="form-control @error('name') is-invalid @enderror"
+                name="name" id="name"  placeholder="Masukkan nama lengkap">
+                @error('name')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
             </div>
             <div class="form-login mb-4">
                 <label for="#" class="form-label">
                     <h6 class="h6-form">2. Tiket Event yang dibeli</h6>
                 </label>
-                <input type="text" class="form-control" id="event" name="event" placeholder="Contoh : IFEST 2022">
+                <input type="text" class="form-control @error('event_title') is-invalid @enderror"
+                name="event_title" id="event_title" placeholder="Contoh : IFEST 2022">
+                @error('event_title')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
             </div>
             <div class="form-login mb-4">
                 <label for="#" class="form-label">
                     <h6 class="h6-form">3. Email</h6>
                 </label>
-                <input type="email" class="form-control" name="email" id="username" placeholder="Masukkan Email">
+                <input type="email" class="form-control @error('email') is-invalid @enderror"
+                name="email" id="email" placeholder="Masukkan Email">
+                @error('email')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
+                
             </div>
             <div class="mb-4">
                 <h6 class="h6-form">Rekening Pembayaran:</h6>
@@ -43,12 +62,18 @@
                     <h6 class="h6-form">4. Upload bukti pembayaran</h6>
                 </label>
                 <br>
-                <input type="file" id="myFile" name="filename">
+                <input class="form-control @error('image') is-invalid @enderror" type="file"
+                id="image" name="image">
+                @error('image')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
             </div>
             <div class="mb-4 text-center col mb-5">
-                <button class="btn btn-1 tombol rounded" type="submit">Submit</button>
+                <button class="btn btn-1 tombol rounded">Submit</button>
             </div>
-        </form>
     </div>
 </div>
+</form>
 @endsection

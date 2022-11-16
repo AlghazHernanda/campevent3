@@ -127,7 +127,8 @@ Route::get('/contact', [ContactController::class, 'index']);
 Route::post('/contact', [ContactController::class, 'store']);
 
 //payment
-Route::get('/payment', [PaymentController::class, 'index']);
+Route::get('/payment', [PaymentController::class, 'create']);
+Route::post('/payment', [PaymentController::class, 'store']);
 
 
 //My Event

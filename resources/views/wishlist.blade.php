@@ -30,7 +30,7 @@
                                     <p class="bi bi-calendar-date">{{ $event->date }}</p>
                                 </div>
                                 <div class="col-sm">
-                                    <p class="bi bi-person-circle"> {{ $event->author->fullname }} </p>
+                                    {{-- <p class="bi bi-person-circle"> {{ $event->author->fullname }} </p> --}}
                                 </div>
                             </div>
                             <div class="col-sm-12">

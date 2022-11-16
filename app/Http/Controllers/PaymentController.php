@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Payment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PaymentController extends Controller
 {
@@ -13,7 +15,6 @@ class PaymentController extends Controller
      */
     public function index()
     {
-        return view('payment');
     }
 
     /**
@@ -23,7 +24,7 @@ class PaymentController extends Controller
      */
     public function create()
     {
-        //
+        return view('payment');
     }
 
     /**
@@ -34,7 +35,29 @@ class PaymentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'event_title' => 'required',
+            'email' => 'required|email:dns',
+            // // 'slug' => 'required|unique:posts',
+            'image' => 'image|file|max:1024|required', //maksudnya maksimal file nya 1024 kilobyte ata 1 mb
+            //'rekening' => 'required',
+
+        ]);
+
+        $validatedData['rekening'] = "1345466";
+        $validatedData['user_id'] = auth()->user()->id;
+
+        //untuk stagging, sebelum deploy
+        if ($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('post-images'); //maka simpan di dalam storage/app/post-images
+        }
+
+        dd($validatedData);
+
+        // Payment::create($validatedData);
+
+        // return redirect('/myevent')->with('success', 'New Event has Been Added');
     }
 
     /**
