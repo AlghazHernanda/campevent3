@@ -120,6 +120,8 @@ Route::get('/admin/accept/{event:id}', [AdminDashboardController::class, 'edit']
 Route::put('/admin/accept/{event:id}', [AdminDashboardController::class, 'update'])->middleware('admin');
 Route::get('/requestevent', [AdminDashboardController::class, 'requestevent'])->middleware('admin');
 Route::get('/requestpayment', [AdminDashboardController::class, 'requestpayment'])->middleware('admin');
+Route::Put('/requestpayment/{payment:id}', [AdminDashboardController::class, 'acceptPayment'])->middleware('admin');
+Route::Put('/declinepayment/{payment:id}', [AdminDashboardController::class, 'declinePayment'])->middleware('admin');
 Route::get('/eventadmin/{event:id}', [AdminDashboardController::class, 'show'])->middleware('admin');
 
 

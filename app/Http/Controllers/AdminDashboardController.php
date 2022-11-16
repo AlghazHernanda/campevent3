@@ -38,6 +38,61 @@ class AdminDashboardController extends Controller
         ]);
     }
 
+    public function acceptPayment(Request $request, Payment $payment)
+    {
+        $rules = [];
+
+        $validatedData = $request->validate($rules);
+
+        // //logika untuk multi checkbox
+        // if (!empty($request->input('eventTheme'))) {
+        //     $validatedData['eventTheme'] = join(',', $request->input('eventTheme'));
+        // } else {
+        //     $validatedData['eventTheme'] = '';
+        // }
+
+        //jika ada gambar yang di upload
+
+        //$validatedData['image'] = $request->file('image')->store('post-images'); //maka simpan di dalam post-images
+
+
+        //$validatedData['user_id'] = auth()->user()->id;
+        //$validatedData['category_id'] = $validatedData['eventType'];
+        $validatedData['status'] = "accepted";
+
+        Payment::where('id', $payment->id)->update($validatedData);
+
+        return redirect('/requestpayment')->with('success', 'Event has Been Updated');
+    }
+
+    public function declinePayment(Request $request, Payment $payment)
+    {
+        $rules = [];
+
+        $validatedData = $request->validate($rules);
+
+        // //logika untuk multi checkbox
+        // if (!empty($request->input('eventTheme'))) {
+        //     $validatedData['eventTheme'] = join(',', $request->input('eventTheme'));
+        // } else {
+        //     $validatedData['eventTheme'] = '';
+        // }
+
+        //jika ada gambar yang di upload
+
+        //$validatedData['image'] = $request->file('image')->store('post-images'); //maka simpan di dalam post-images
+
+
+        //$validatedData['user_id'] = auth()->user()->id;
+        //$validatedData['category_id'] = $validatedData['eventType'];
+        $validatedData['status'] = "waiting";
+
+        Payment::where('id', $payment->id)->update($validatedData);
+
+        return redirect('/requestpayment')->with('success', 'Event has Been Updated');
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *

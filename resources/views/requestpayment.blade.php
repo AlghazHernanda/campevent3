@@ -38,20 +38,29 @@ return $tanggal . ' ' . $bulanIndo[abs($bulan)] . ' ' . $tahun;
                     <td>{{ $payment->event_title }}</td>
                     <td>{{ $payment->email }}</td>
                     {{-- untuk stagging --}}
+                    {{-- catatan, kalau php storage link error, delete dulu storage di publik dan post-images di storage, lalu
+                        php artisan storage:link --}}
                     <td><img src="{{ asset('storage/' . $payment->image) }}" class=""
-                        alt=" " /></td>
+                        alt="image" /></td>
                     <td>{{ $payment->status }}</td>
                     <td>
                         <div class="action row">
                             <div class="col-sm">
-                                <a href="#" class="accept">Accept<a></a>
+                                <form action="/requestpayment/{{ $payment->id }}" method="POST" class="d-inline">
+                                    @method('put')
+                                    @csrf 
+                                    <button class="accept">Accept</button>
+                                {{-- <a href="#" class="accept">Accept<a></a> --}}
+                            </form>
+              
                             </div>
                             <div class="col-sm">
-                                <form action="#" method="POST" class="d-inline">
-                                    @method('delete')
-                                    @csrf
-                                    <button class="delete" onclick="return confirm('are you sure?')"><span data-feather="x-circle">Decline</span></button>
-                                </form>
+                                <form action="/declinepayment/{{ $payment->id }}" method="POST" class="d-inline">
+                                    @method('put')
+                                    @csrf 
+                                    <button class="delete">Decline</button>
+                                {{-- <a href="#" class="accept">Accept<a></a> --}}
+                            </form>
                                 {{-- <a href="#" class="delete">Delete<a></a> --}}
                             </div>
                     </td>
