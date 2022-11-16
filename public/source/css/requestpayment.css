@@ -241,6 +241,10 @@ h1 {
 
   .accept{
     color: #378C1A;
+    border:0px;
+    border-color: #f4f5fa;
+    background: #f4f5fa;
+    text-decoration: underline;
   }
 
   .accept:hover{
