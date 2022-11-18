@@ -60,6 +60,7 @@ class PaymentController extends Controller
             $request->file('image')->move(public_path('images'), $filename);
         }
 
+        $validatedData['image'] = $filename;
         //dd($validatedData);
 
         Payment::create($validatedData);
