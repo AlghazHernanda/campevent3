@@ -1,18 +1,19 @@
 @extends('layouts.eventdetail')
 @section('container')
-@php
-function convertDateDBtoIndo($string){
-    // contoh : 2019-01-30
-    
-    $bulanIndo = ['', 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September' , 'Oktober', 'November', 'Desember'];
- 
-    $tanggal = explode("-", $string)[2];
-    $bulan = explode("-", $string)[1];
-    $tahun = explode("-", $string)[0];
- 
-    return $tanggal . " " . $bulanIndo[abs($bulan)] . " " . $tahun;
-}
-@endphp
+    @php
+        function convertDateDBtoIndo($string)
+        {
+            // contoh : 2019-01-30
+        
+            $bulanIndo = ['', 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+        
+            $tanggal = explode('-', $string)[2];
+            $bulan = explode('-', $string)[1];
+            $tahun = explode('-', $string)[0];
+        
+            return $tanggal . ' ' . $bulanIndo[abs($bulan)] . ' ' . $tahun;
+        }
+    @endphp
     <div class="header">
         <div>
             <h1 class="h1-header">Event Details</h1>
@@ -20,7 +21,7 @@ function convertDateDBtoIndo($string){
         <hr class="hr">
 
         <div class="photo">
-            <img src="{{url("/images/{$event->image}")}}" class="ifest" alt=" " />
+            <img src="{{ url("/images/{$event->image}") }}" class="ifest" alt=" " />
         </div>
 
         <div class="techno">
@@ -30,9 +31,9 @@ function convertDateDBtoIndo($string){
                     <div class="col-sm">
                         <div class="row text">
                             @for ($i = 0; $i < 2; $i++)
-                            <div class="col status">{{ $event->eventTheme[$i] }}</div>
+                                <div class="col status">{{ $event->eventTheme[$i] }}</div>
                             @endfor
-                            
+
                             {{-- <div class="col info">online</div> --}}
                         </div>
                     </div>
@@ -43,8 +44,8 @@ function convertDateDBtoIndo($string){
                     </div>
                     <div class="col-sm">
                         <form action="/eventdetail/{{ $event->id }}" method="post">
-                        @csrf
-                        <button class="btn btn-love"><i class="bi bi-heart-fill fs-4"></i></button>
+                            @csrf
+                            <button class="btn btn-love"><i class="bi bi-heart-fill fs-4"></i></button>
                         </form>
                     </div>
                 </div>
@@ -57,7 +58,7 @@ function convertDateDBtoIndo($string){
                 {!! $event->desc !!}
             </h4>
             <h3>Date and Time :</h3>
-            <p class="bi bi-calendar2-week-fill">{{ convertDateDBtoIndo($event->date)}}</p>
+            <p class="bi bi-calendar2-week-fill">{{ convertDateDBtoIndo($event->date) }}</p>
             {{-- <h3 style="padding-top: 40px;">Place :</h3>
             <p class="bi bi-geo-alt-fill"> Zoom Meeting</p> --}}
             <h3 style="padding-top: 40px;">Speaker :</h3>
@@ -68,12 +69,30 @@ function convertDateDBtoIndo($string){
             </ul>
 
             <!-- Ticket -->
-            <div class="ticket">
+            <div class="row mb-5">
+                <center>
+                    <div class="col">
+                        <div class="card text-center w-50" style="background: #e0ddaa;">
+                            <div class="card-body">
+                                <h2 class="card-title"><i class="bi bi-ticket-fill"></i> Ticket Price :
+                                    Rp.{{ format_uang($event->price) }}</h2>
+
+                                <button class="btn btn-success mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                    style="font-weight: bold">
+                                    Buy Ticket
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </center>
+            </div>
+
+            {{-- <div class="ticket">
                 <p class="bi bi-ticket-fill"> Ticket Price :</p>
                 <h2 class="h2-price">Rp.{{ format_uang($event->price) }}</h2>
-                <div class="col-sm-12">
-                    <!-- Quantity -->
-                    {{-- <div class="d-flex">
+                <div class="col-sm-12"> --}}
+            <!-- Quantity -->
+            {{-- <div class="d-flex">
                         <button class="btn btn-minus"
                             onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                             <i class="bi bi-dash"></i>
@@ -88,30 +107,10 @@ function convertDateDBtoIndo($string){
                             <i class="bi bi-plus"></i>
                         </button>
                     </div> --}}
-                    <h6 style="padding-top: 10px;">You can pay with gopay and dana :</h6>
-                    <h4 style="padding-top: 10px;">{{ $event->no_hp }}</h4>
-                </div>
-            </div>
-            <!-- Ticket -->
+            {{-- <h6>You can pay with gopay and dana :</h6>
+            <h4>{{ $event->no_hp }}</h4>
+        </div> --}}
 
-            <!-- The Modal -->
-            <div class="modal fade" id="myModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <!-- Modal body -->
-                        <div class="modal-body">
-                            <div class="image"> <img class="vector" src="/source/img/Vector.png"> </div>
-                            <h2 class="h2-modal">
-                                Success
-                            </h2>
-                            <h3 class="h3-modal">
-                                Pay the bill in myEvent page if the event is paid event
-                            </h3>
-                            <a href="/listevent"><button class="btn btn-modal">Back to list event</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 @endsection
