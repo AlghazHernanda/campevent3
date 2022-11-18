@@ -40,8 +40,9 @@ return $tanggal . ' ' . $bulanIndo[abs($bulan)] . ' ' . $tahun;
                     {{-- untuk stagging --}}
                     {{-- catatan, kalau php storage link error, delete dulu storage di publik dan post-images di storage, lalu
                         php artisan storage:link --}}
-                    <td><img src="{{ asset('storage/' . $payment->image) }}" class=""
-                        alt="image" /></td>
+                    <td>
+                        {{-- <img src="{{ asset('storage/' . $payment->image) }}" class="" alt="image" /></td> --}}
+                        <img src="{{url("/images/{$payment->image}")}}" class="ifest" alt=" " />
                     <td>{{ $payment->status }}</td>
                     <td>
                         <div class="action row">
