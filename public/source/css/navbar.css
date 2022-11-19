@@ -1,41 +1,13 @@
-.navbar {
+.bg-brown {
     background-color: #ceab93;
 }
 
-.logo {
-    width: 240px;
-    height: 60px;
-}
-
-#Navbar .nav-link {
-    margin-left: 40px;
-    font-weight: 600;
-    font-family: "Poppins";
-    font-size: 15px;
-    line-height: 150%;
-    color: #fafafa;
-}
-
-#Navbar .btn {
-    margin-left: 40px;
-    font-style: normal;
-    font-weight: 600;
-    font-family: "Poppins";
-    font-size: 16px;
-    line-height: 150%;
-    padding: 4px 45px;
+.btn-brown {
     background-color: #ad8b73;
-    color: #fafafa;
-    margin-top: 3px;
 }
 
-#Navbar .btn:hover {
+.btn-brown:hover {
     background-color: #7c684a;
-    color: #fafafa;
-}
-
-#Navbar .nav-link:hover {
-    color: #7c684a;
 }
 
 .btn-logout {
@@ -50,20 +22,19 @@
     border-radius: 10px;
     width: 131px;
     height: 39px;
-    margin-left: 15px;
+    /* margin-left: 15px; */
 }
 
 .profile {
     width: 162px;
-    height: 38px;
+    height: 30px;
     background: #ffffff;
     text-align: center;
-    border-radius: 20px 20px 0px 0px;
+    /* border-radius: 20px 20px 0px 0px; */
 }
 
 .dropdown-item {
-    width: 162px;
-    height: 38px;
+    height: 35px;
     background: #ffffff;
     text-align: center;
 }
@@ -74,10 +45,9 @@
 }
 
 .dropdown-menu {
-    width: 164px;
     height: 196px;
     background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
+    border-radius: 10px 10px 10px 10px;
     padding-top: 0px;
 }
