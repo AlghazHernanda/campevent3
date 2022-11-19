@@ -84,7 +84,13 @@
                 <td>
                     <div class="action row">
                         <div class="col-sm">
-                            <a href="/admin/accept/{{ $event->id }}" class="accept">Accept<a></a>
+                            <form action="/admin/accept/{{ $event->id }}" method="POST" class="d-inline">
+                                @method('put')
+                                @csrf 
+                                <button class="accept">Accept</button>
+                            {{-- <a href="#" class="accept">Accept<a></a> --}}
+                        </form>
+                            {{-- <a href="/admin/accept/{{ $event->id }}" class="accept">Accept<a></a> --}}
                         </div>
                         <div class="col-sm">
                             <form action="/deleteEvent/{{ $event->id }}" method="POST" class="d-inline">
