@@ -124,7 +124,7 @@ class AdminDashboardController extends Controller
     public function update(Request $request, Event $event)
     {
         $rules = [
-            'title' => 'required|max:255',
+            //'title' => 'required|max:255',
             // 'published_at' => 'required',
         ];
 
