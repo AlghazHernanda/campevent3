@@ -7,12 +7,11 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active fw-bolder mx-2 text-white" aria-current="/" href="#">Home</a>
-                <a class="nav-link active fw-bolder mx-2 text-white" href="/listevent">Event</a>
-                <a class="nav-link active fw-bolder mx-2 text-white" href="/about">About Us</a>
-                <a class="nav-link active fw-bolder mx-2 text-white" href="/faq">FAQ</a>
+                <a class="menu fw-bolder mx-4" href="/">Home</a>
+                <a class="menu fw-bolder mx-4" href="/listevent">Event</a>
+                <a class="menu fw-bolder mx-4" href="/about">About Us</a>
+                <a class="menu fw-bolder mx-4" href="/faq">FAQ</a>
             </div>
-
 
             <ul>
                 {{-- kalo udah login, tampilin ini --}}
@@ -27,9 +26,10 @@
 
                         <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item"> {{ auth()->user()->fullname }}</a></li>
-                            <li><a class="dropdown-item" href="/profile">Profile</a></li>
-                            <li><a class="dropdown-item" href="/myevent">My Event</a></li>
-                            <li><a class="dropdown-item" href="/wishlist">Wishlist</a></li>
+                            <li><a class="dropdown-item" href="/profile"><i class="bi bi-person"></i> Profile</a></li>
+                            <li><a class="dropdown-item" href="/myevent"><i class="bi bi-calendar-event"></i> Event</a></li>
+                            <li><a class="dropdown-item" href="/wishlist"><i class="bi bi-bookmark-heart"></i> Wishlist</a>
+                            </li>
                             <li class="text-center ">
                                 <form action="/logout" method="post">
                                     @csrf
