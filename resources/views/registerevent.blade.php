@@ -43,12 +43,12 @@
                                 <div class="drop-event">
                                     <h2 class="h2-form" style="padding-bottom: 10px; padding-left: 35px;">Event Theme
                                     </h2>
-                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                    {{-- <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
                                         style="margin-left: 35px;" data-bs-toggle="dropdown" aria-expanded="false">
                                         Select Theme
-                                    </button>
-                                    <select name="eventType" class="dropdown-menu drop1"
-                                        aria-labelledby="dropdownMenuButton1">
+                                    </button> --}}
+                                    <select name="sources" id="sources" class="form-select" placeholder="Select Theme">
+                                        <option selected>Select Theme</option>
                                         @foreach ($eventTypes as $eventType)
                                             @if (old('eventType') == $eventType->id)
                                                 <option value="{{ $eventType->id }}" selected>{{ $eventType->name }}
@@ -58,6 +58,17 @@
                                             @endif
                                         @endforeach
                                     </select>
+                                    {{-- <select name="eventType" class="dropdown-menu drop1"
+                                        aria-labelledby="dropdownMenuButton1" placehoder="Select Theme">
+                                        @foreach ($eventTypes as $eventType)
+                                            @if (old('eventType') == $eventType->id)
+                                                <option value="{{ $eventType->id }}" selected>{{ $eventType->name }}
+                                                </option>
+                                            @else
+                                                <option value="{{ $eventType->id }}">{{ $eventType->name }}</option>
+                                            @endif
+                                        @endforeach
+                                    </select> --}}
                                 </div>
                             </div>
                             <!-- Section 1 -->
@@ -78,8 +89,7 @@
                                 <div class="col-sm-4">
                                     <div class="form-check">
                                         <p class="text-card">
-                                            <input type="checkbox" class="checkbox" name='eventTheme[]'
-                                                value="online">
+                                            <input type="checkbox" class="checkbox" name='eventTheme[]' value="online">
                                             <b>Online</b>
                                         </p>
                                     </div>
@@ -98,8 +108,7 @@
                                 <div class="col-sm-4">
                                     <div class="form-check">
                                         <p class="text-card">
-                                            <input type="checkbox" class="checkbox" name='eventTheme[]'
-                                                value="Offline">
+                                            <input type="checkbox" class="checkbox" name='eventTheme[]' value="Offline">
                                             <b>Offline</b>
                                         </p>
                                     </div>
@@ -140,8 +149,8 @@
                                 <div class="input-group">
                                     <i class="bi bi-telephone input-group-text"></i>
                                     <input type="number"
-                                        class="datepicker form-control @error('no_hp') is-invalid @enderror" name="no_hp"
-                                        placeholder="08XXXXXXXXXX">
+                                        class="datepicker form-control @error('no_hp') is-invalid @enderror"
+                                        name="no_hp" placeholder="08XXXXXXXXXX">
                                     @error('no_hp')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -173,8 +182,8 @@
                                         <label for="#" class="form-label">
                                             <h2 class="h2-form">Speaker</h2>
                                         </label>
-                                        <textarea type="text" name="speaker" class="fc-sc3 form-control @error('speaker') is-invalid @enderror" name="speaker"
-                                            id="#" placeholder="Please insert event speaker with list"></textarea>
+                                        <textarea type="text" name="speaker" class="fc-sc3 form-control @error('speaker') is-invalid @enderror"
+                                            name="speaker" id="#" placeholder="Please insert event speaker with list"></textarea>
                                         @error('speaker')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
@@ -188,8 +197,8 @@
                                             <h2 class="h2-form">Price (in rupiah)</h2>
                                         </label>
                                         <input type="number" name="price"
-                                            class="fc-sc5 form-control @error('price') is-invalid @enderror" name="price"
-                                            id="#" placeholder="Rp">
+                                            class="fc-sc5 form-control @error('price') is-invalid @enderror"
+                                            name="price" id="#" placeholder="Rp">
                                         @error('price')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
