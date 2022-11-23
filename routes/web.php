@@ -131,7 +131,7 @@ Route::post('/contact', [ContactController::class, 'store']);
 
 //payment
 Route::get('/payment', [PaymentController::class, 'create'])->middleware('auth');
-Route::post('/payment', [PaymentController::class, 'store']);
+Route::post('/payment', [PaymentController::class, 'store'])->middleware('auth');
 
 
 //My Event
