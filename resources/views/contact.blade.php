@@ -5,12 +5,12 @@
             <div class="col-sm-5">
                 <h1 class="h1-kiri">Contact <span style="color :#7C684A">Us</span>!</h1>
                 <h2 class="h2-kiri">Reach us and our buddies will reach you within 24 hours</h2>
-                <div class="row emaul">
+                <div class="row email">
                     <div class="col-sm-1">
                         <p class="bi bi-envelope-fill fs-1"></p>
                     </div>
                     <div class="col-sm-11">
-                        <h4 class="h4-kiri">campevent2022@gmail.com</h4>
+                        <h4 class="h4-kiri text-break">campevent2022@gmail.com</h4>
                     </div>
                 </div>
                 <div class="row location">
@@ -31,7 +31,7 @@
                 <form action="/contact" method="post">
                     @csrf
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class=" col-sm-6">
                             <div class="form-name">
                                 <label for="#" class="form-label">First Name</label>
                                 <input type="text" class="form-control @error('firstname') is-invalid @enderror"
@@ -43,7 +43,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-sm-6" style="padding-left: 25px;">
+                        <div class=" col-sm-6" style="padding-left: 25px;">
                             <div class="form-name">
                                 <label for="#" class="form-label">Last Name</label>
                                 <input type="text" class="form-control @error('lastname') is-invalid @enderror"
