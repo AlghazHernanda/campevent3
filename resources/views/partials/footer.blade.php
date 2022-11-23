@@ -1,21 +1,23 @@
 <footer class="jumbotron-fluid" id="Footer">
-    <div class="container">
+    <div class="container py-5">
         <div class="row">
-            <div class="col-5">
+            <div class="col-lg-6 col-md-12">
                 <div class="about">
                     <div class="logo">
                         <img src="/source/img/logo.png">
                     </div>
                     <h3>CampEvent is well organized platform which contains
-                        event information and buying event ticket. We provide the people with the good experience in attending an event.</h3>
+                        event information and buying event ticket. We provide the people with the good experience in
+                        attending an event.</h3>
                 </div>
                 <div class="hr1" style="margin-top: 20px; margin-bottom: 20px;"></div>
                 <div class="about">
                     <h3>Head Office</h3>
-                    <h3>Casa De La Madre, Jl. Kolonel Ahmad Syam No.702, Cikeruh, Jatinangor, Kabupaten Sumedang, Jawa Barat 45363</h3>
+                    <h3>Casa De La Madre, Jl. Kolonel Ahmad Syam No.702, Cikeruh, Jatinangor, Kabupaten Sumedang, Jawa
+                        Barat 45363</h3>
                 </div>
             </div>
-            <div class="col-2">
+            <div class="col-lg-2 col-md-6">
                 <div class="company">
                     <h2>Menu</h2>
                     <ul>
@@ -34,10 +36,10 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-1">
+            <div class="col-lg-1">
                 <div class="vl"></div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-3 col-md-6">
                 <div class="services">
                     <h2>Connect With Us</h2>
                     <div>

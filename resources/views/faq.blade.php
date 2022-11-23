@@ -99,21 +99,29 @@
 @endsection
 @section('body')
     <div id="sectionFive">
-        <div class="col-sm-12">
-            <div class="notif shadow-lg">
-                <div class="row">
-                    <div class="capt-secFive col-sm-8">
-                        <h2 class="h2-secFive">Is there any problem</h2>
-                        <h2 class="h2-secFive">issue?</h2>
-                        <h4 class="h4-secFive">Don’t worry, we have 24/7 customer service for you to solve your problem
-                        </h4>
-                        <a href="/contact"><button class="btn btn-1">Contact Us</button></a>
-                    </div>
-                    <div class="col-sm-4">
-                        <img src="/source/img/vector-image-section5.jpg" class="img-section5">
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-4">
+                    <div class="card shadow-lg mt-4">
+                        <div class="card-body p-5">
+                            <div class="row">
+                                <div class="col-6 text-align-justify">
+                                    <h2 class="h2-secFive">Is there any problem</h2>
+                                    <h2 class="h2-secFive">issue?</h2>
+                                    <h4 class="h4-secFive">Don’t worry, we have 24/7 customer service for you to solve your
+                                        problem
+                                    </h4>
+                                    <a href="/contact"><button class="btn btn-1">Contact Us</button></a>
+                                </div>
+                                <div class="col-6 center">
+                                    <center><img src="/source/img/vector-image-section5.jpg" class="img-section5"></center>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 @endsection
