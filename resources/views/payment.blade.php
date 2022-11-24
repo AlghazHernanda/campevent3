@@ -71,7 +71,7 @@
             @enderror
             </div>
             <div class="mb-4 text-center col mb-5">
-                <button class="btn btn-1 tombol rounded">Submit</button>
+                <button class="btn btn-1 tombol rounded"  data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
             </div>
     </div>
 </div>

@@ -1,21 +1,21 @@
 h1 {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 600;
     font-size: 30px;
     line-height: 45px;
 }
 
-h6{
-    font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 18px;
-line-height: 27px;
+h6 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
 }
 
-p{
-    font-family: 'Poppins';
+p {
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -24,35 +24,35 @@ p{
     margin-bottom: 0px;
 }
 
-.tatacara{
-    background-color: #008E89;
+.tatacara {
+    background-color: #008e89;
 }
 
-.text-beige{
-    color: #E0DDAA;
+.text-beige {
+    color: #e0ddaa;
 }
 
-.peserta{
+.peserta {
     margin-left: 170px;
     margin-right: 170px;
     color: white;
 }
 
-.rekening{
-    font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 24px;
+.rekening {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
 }
 
-.pembayaran{
+.pembayaran {
     margin-left: 170px;
     margin-right: 170px;
 }
 
-.btn{
-    background-color: #F7CC74;
+.btn {
+    background-color: #f7cc74;
     color: white;
     padding-left: 70px;
     padding-right: 70px;
@@ -60,10 +60,38 @@ line-height: 24px;
     padding-bottom: 10px;
 }
 
-.tombol{
-    font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 15px;
-line-height: 30px;
+.tombol {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.h2-modal {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #25282b;
+}
+
+.h3-modal {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+
+.btn-modal:hover {
+    background: #cda552;
+    border-radius: 10px;
+    color: #ffffff;
 }

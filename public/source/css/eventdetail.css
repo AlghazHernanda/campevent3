@@ -333,3 +333,9 @@ p {
 .bi-heart-fill {
     color: #ffffff;
 }
+
+.eventtype {
+    margin-left: 20px;
+    margin-top: 5px;
+    color: white;
+}

@@ -2,13 +2,12 @@
 @section('myevent')
     <div class="reservationlist">
         <div class="container">
-            <h3 style="padding-bottom: 17px;">Reservation List</h3>
+            <h3 style="padding-bottom: 17px;">Purchase List</h3>
             <table class="table table-bordered">
                 <thead class="reservation">
                     <tr>
                         <th>No</th>
                         <th>Event</th>
-                        <th>Quantity</th>
                         <th>Price</th>
                         <th>Date</th>
                         <th>Payment Status</th>
@@ -20,7 +19,35 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $event->title }}</td>
-                                <td>2</td>
+                                <td>{{ $event->price }}</td>
+                                <td>{{ $event->date }}</td>
+                                <td>
+                                    <div class="paymentstatus">{{ $event->status }}</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    @endif
+                @endforeach
+            </table>
+        </div>
+        <div class="container">
+            <h3 style="padding-bottom: 17px;padding-top: 122px;">Registration List</h3>
+            <table class="table table-bordered">
+                <thead class="reservation">
+                    <tr>
+                        <th>No</th>
+                        <th>Event</th>
+                        <th>Price</th>
+                        <th>Date</th>
+                        <th>Payment Status</th>
+                    </tr>
+                </thead>
+                @foreach ($events as $event)
+                    @if ($event->status === 'waiting')
+                        <tbody>
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $event->title }}</td>
                                 <td>{{ $event->price }}</td>
                                 <td>{{ $event->date }}</td>
                                 <td>

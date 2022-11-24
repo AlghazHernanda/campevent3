@@ -61,3 +61,13 @@
 .menu:hover {
     color: #7c684a;
 }
+
+.navbar-drop {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+}
+
+.btn-hover:hover {
+    background: #ca0b00;
+}

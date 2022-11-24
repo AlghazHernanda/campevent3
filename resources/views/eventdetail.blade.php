@@ -30,16 +30,20 @@
                 <div class="row desc">
                     <div class="col-sm">
                         <div class="row text">
-                            @for ($i = 0; $i < 2; $i++)
+                            {{-- @for ($i = 0; $i < 2; $i++)
                                 <div class="col status">{{ $event->eventTheme[$i] }}</div>
-                            @endfor
+                            @endfor --}}
+                            <div class="col status">{{ $event->eventTheme[1] }}</div>
+                            <div class="eventtype">{{ $event->eventTheme[0] }}</div>
+
 
                             {{-- <div class="col info">online</div> --}}
                         </div>
                     </div>
                     <div class="col-sm">
                         <div class="event">
-                            <div class="status-event">Free</div>
+                                <div class="status-event">{{ $event->eventType }}</div>
+                            {{-- <div class="">Free</div> --}}
                         </div>
                     </div>
                     <div class="col-sm">
@@ -75,7 +79,7 @@
                         <div class="card text-center w-50" style="background: #e0ddaa;">
                             <div class="card-body">
                                 <h2 class="card-title"><i class="bi bi-ticket-fill"></i> Ticket Price :
-                                    Rp.{{ format_uang($event->price) }}</h2>
+                                    Rp{{ format_uang($event->price) }}</h2>
 
                                 <button class="btn btn-success mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal"
                                     style="font-weight: bold">
