@@ -43,11 +43,12 @@
                                 <div class="drop-event">
                                     <h2 class="h2-form" style="padding-bottom: 10px; padding-left: 35px;">Event Theme
                                     </h2>
-                                    {{-- <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
                                         style="margin-left: 35px;" data-bs-toggle="dropdown" aria-expanded="false">
                                         Select Theme
-                                    </button> --}}
-                                    <select name="sources" id="sources" class="form-select" placeholder="Select Theme">
+                                    </button>
+                                    
+                                    {{-- <select name="sources" id="sources" class="form-select" placeholder="Select Theme">
                                         <option selected>Select Theme</option>
                                         @foreach ($eventTypes as $eventType)
                                             @if (old('eventType') == $eventType->id)
@@ -57,8 +58,9 @@
                                                 <option value="{{ $eventType->id }}">{{ $eventType->name }}</option>
                                             @endif
                                         @endforeach
-                                    </select>
-                                    {{-- <select name="eventType" class="dropdown-menu drop1"
+                                    </select> --}}
+
+                                    <select name="eventType" class="dropdown-menu drop1"
                                         aria-labelledby="dropdownMenuButton1" placehoder="Select Theme">
                                         @foreach ($eventTypes as $eventType)
                                             @if (old('eventType') == $eventType->id)
@@ -68,7 +70,7 @@
                                                 <option value="{{ $eventType->id }}">{{ $eventType->name }}</option>
                                             @endif
                                         @endforeach
-                                    </select> --}}
+                                    </select>
                                 </div>
                             </div>
                             <!-- Section 1 -->
