@@ -81,10 +81,13 @@
                                 <h2 class="card-title"><i class="bi bi-ticket-fill"></i> Ticket Price :
                                     Rp{{ format_uang($event->price) }}</h2>
 
+                                <form action="/payment/{{ $event->id }}" method="get">
+                                @csrf
                                 <button class="btn btn-success mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal"
                                     style="font-weight: bold">
                                     Buy Ticket
                                 </button>
+                                </form>
                             </div>
                         </div>
                     </div>
