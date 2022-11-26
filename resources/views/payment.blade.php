@@ -33,7 +33,7 @@
                     <h6 class="h6-form">2. Tiket Event yang dibeli</h6>
                 </label>
                 <input type="text" class="form-control @error('event_title') is-invalid @enderror"
-                name="event_title" id="event_title" placeholder="Contoh : IFEST 2022">
+                name="event_title" id="event_title" value="{{ $event->title}}">
                 @error('event_title')
                 <div class="invalid-feedback">
                     {{ $message }}
