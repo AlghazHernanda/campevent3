@@ -105,7 +105,7 @@ Route::get('/editEvent/{event:id}', [DasboardEventController::class, 'edit'])->m
 Route::put('/editEvent/{event:id}', [DasboardEventController::class, 'update'])->middleware('auth');
 Route::get('/eventdetail/{event:id}', [DasboardEventController::class, 'show'])->middleware('auth');
 
-Route::get('/payment/{event:id}', [DasboardEventController::class, 'showPaymentEvent']);
+Route::get('/payment/{event:id}', [DasboardEventController::class, 'showPaymentEvent'])->middleware('auth');
 
 Route::delete('/deleteEvent/{event:id}', [DasboardEventController::class, 'destroy'])->middleware('auth');
 
