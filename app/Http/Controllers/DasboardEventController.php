@@ -112,6 +112,13 @@ class DasboardEventController extends Controller
         ]);
     }
 
+    public function showPaymentEvent(Event $event)
+    {
+        return view('payment', [
+            'event' => $event
+        ]);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
