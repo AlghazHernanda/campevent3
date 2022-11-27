@@ -105,10 +105,11 @@ class DasboardEventController extends Controller
      * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function show(Event $event)
+    public function show(Event $event, EventType $eventType)
     {
         return view('eventdetail', [
-            'event' => $event
+            'event' => $event,
+            'eventType' => $eventType
         ]);
     }
 
