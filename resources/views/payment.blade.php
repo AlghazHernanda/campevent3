@@ -33,7 +33,7 @@
                     <h6 class="h6-form">2. Tiket Event yang dibeli</h6>
                 </label>
                 <input type="text" class="form-control @error('event_title') is-invalid @enderror"
-                name="event_title" id="event_title" placeholder="Contoh : IFEST 2022">
+                name="event_title" id="event_title" value="{{ $event->title}}">
                 @error('event_title')
                 <div class="invalid-feedback">
                     {{ $message }}
@@ -71,7 +71,7 @@
             @enderror
             </div>
             <div class="mb-4 text-center col mb-5">
-                <button class="btn btn-1 tombol rounded">Submit</button>
+                <button class="btn btn-1 tombol rounded"  data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
             </div>
     </div>
 </div>

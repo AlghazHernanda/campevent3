@@ -28,7 +28,31 @@
     {{-- manggil navbar di folder partials.navbar --}}
     @include('partials.navbar')
 
-    <div>
+    <div class="container-fluid p-0">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="image"> <img class="vector rounded mx-auto d-block" src="/source/img/Vector.png">
+                        </div>
+                        <h2 class="h2-modal">
+                            YEAYY!!
+                        </h2>
+                        <h3 class="h3-modal">
+                            Our team will send the ticket to your email. please check your “Myevent” Page.
+                        </h3>
+                    </div>
+                    <div class="modal-footer align-self-center">
+                        {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
+                        <a href="/payment">
+                            <button type="button" class="btn"
+                                style="background: #F7CC74; color:#fff; font-weight:bold">Go to MyEvent
+                                Page</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         @yield('payment') {{-- jadi ini nanti isinya halaman-halaman lain, biar pake boostrap nya 1 aja --}}
 
