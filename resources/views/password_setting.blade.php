@@ -1,8 +1,8 @@
 @extends('layouts.passwordsetting') {{-- ini memanggil file main yang di dalam layout --}}
 @section('password')
-    <div class="psetting">
-        <div>
-            <div class="notif shadow-lg">
+    <div class="container p-5">
+        <div class="card shadow-lg mx-auto">
+            <div class="card-body">
                 <form action="/change" method="POST">
 
                     @method('put')
@@ -20,7 +20,9 @@
                     @endif
 
                     <h1 class="h1-psetting">Change Password</h1>
-                    <p class="p-psetting">Your new password must be different form previous used password. Minimum length
+                    <p class="p-psetting">Your new password must be different form previous used password.
+                        Minimum
+                        length
                         is 6 Characters</p>
                     <div class="form-change">
                         <label for="#" class="form-label">
@@ -60,7 +62,7 @@
                             </div>
                         @enderror
                     </div>
-                    <div>
+                    <div class="change-passsword">
                         <button type="submit" class="btn btn-psetting" data-bs-toggle="modal" data-bs-target="#myModal">
                             Change Password
                         </button>
