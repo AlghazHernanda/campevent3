@@ -39,6 +39,8 @@ class PaymentController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|max:255',
             'event_title' => 'required',
+            'event_date' => 'required',
+            'event_price' => 'required',
             'email' => 'required|email:dns',
             // // 'slug' => 'required|unique:posts',
             'image' => 'image|file|max:1024|required', //maksudnya maksimal file nya 1024 kilobyte ata 1 mb
