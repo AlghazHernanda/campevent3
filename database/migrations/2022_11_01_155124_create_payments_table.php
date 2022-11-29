@@ -21,6 +21,8 @@ class CreatePaymentsTable extends Migration
             $table->string('image')->nullable();
             $table->string('email');
             $table->string('rekening');
+            $table->date('event_date');
+            $table->string('event_price');
             $table->string('status')->default("waiting");
             $table->timestamps();
         });
