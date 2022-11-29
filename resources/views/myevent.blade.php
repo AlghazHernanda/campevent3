@@ -13,20 +13,20 @@
                         <th>Payment Status</th>
                     </tr>
                 </thead>
-                @foreach ($events as $event)
-                    @if ($event->status === 'waiting')
+                @foreach ($payments as $payment)
+                    {{-- @if ($payment->status === 'waiting') --}}
                         <tbody>
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $event->title }}</td>
-                                <td>{{ $event->price }}</td>
-                                <td>{{ $event->date }}</td>
+                                <td>{{ $payment->event_title }}</td>
+                                <td>{{ $payment->event_price }}</td>
+                                <td>{{ $payment->event_date }}</td>
                                 <td>
-                                    <div class="paymentstatus">{{ $event->status }}</div>
+                                    <div class="paymentstatus">{{ $payment->status }}</div>
                                 </td>
                             </tr>
                         </tbody>
-                    @endif
+                    {{-- @endif --}}
                 @endforeach
             </table>
         </div>
