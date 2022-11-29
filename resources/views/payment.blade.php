@@ -32,6 +32,13 @@
                 <label for="#" class="form-label">
                     <h6 class="h6-form">2. Tiket Event yang dibeli</h6>
                 </label>
+
+                {{-- hidden untuk ambil value event --}}
+                <input type="hidden" class="form-control @error('event_title') is-invalid @enderror"
+                name="event_price" id="price" value="{{ $event->price}}">
+                <input type="hidden" class="form-control @error('event_title') is-invalid @enderror"
+                name="event_date" id="date" value="{{ $event->date}}">
+
                 <input type="text" class="form-control @error('event_title') is-invalid @enderror"
                 name="event_title" id="event_title" value="{{ $event->title}}">
                 @error('event_title')
