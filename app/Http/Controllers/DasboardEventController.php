@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use App\Models\EventType;
+use App\Models\Payment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -19,6 +20,7 @@ class DasboardEventController extends Controller
         return view('myevent', [
             'events' => Event::latest()->where('user_id', auth()->user()->id)->get(), //dimana user_id nya sama kyk user id yang login
             // 'themes' => Event::where('eventTheme')
+            'payments' => Payment::latest()->where('user_id', auth()->user()->id)->get(),
         ]);
     }
 
