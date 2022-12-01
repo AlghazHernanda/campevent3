@@ -1,263 +1,269 @@
 h1 {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 600;
     font-size: 30px;
     line-height: 45px;
-  }
-  
-  h2 {
-    font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 36px;
-  }
-  
-  h3 {
-    font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 27px;
-  }
-  
-  h4 {
-    font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  }
-  
-  h5 {
-    font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-  }
-  
-  h6 {
-    font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  }
-  
-  p {
-    font-family: 'Poppins';
+}
+
+h2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+h3 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+h4 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+h5 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+h6 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+p {
+    font-family: "Poppins";
     font-size: 16px;
     line-height: 150%;
-  }
-  
-  h1, h2, h3, h4, p {
-    margin: 0;
-  }
-  
-  body {
-      margin: 0;
-      background: #F4F5FA;
-  }
-  
-  .container-fluid{
-      padding-left: 0px;
-  }
-  
-  .side-bar{
-      background: #AD8B73;
-      width: 296px;
-      padding-top: 27px;
-      padding-left: 40px;
-      padding-right: 40px;
-  }
-  
-  .logo{
-      width: 210px;
-      height: 55px;
-  }
-  
-  .admin-name{
-      font-family: 'Poppins';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 32px;
-      letter-spacing: 0.01em;
-      color: #FFFFFF;
-      padding-top: 38px;
-      padding-bottom: 10px;
-  }
-  
-  .p-admin{
-      font-family: 'Poppins';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 21px;
-      letter-spacing: 0.01em;
-      color: #FFFFFF;
-  }
-  
-  .p-menu{
-      font-family: 'Poppins';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 21px;
-      letter-spacing: 0.01em;
-      color: #BFBFBF;
-      padding-top: 44px;
-      padding-bottom: 13px;
-  }
-  
-  .nav-link{
-      font-family: 'Poppins';
-      font-style: normal;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: 0.01em;
-      color: #FFFFFF;
-      padding-left: 0px;
-  }
-  
-  
-  .bi-calendar-week{
-      color: #FFFFFF;
-  }
-  
-  .bi-house{
-      color: #FFFFFF;
-  }
-  
-  .bi-door-open{
-      color: #FFFFFF;
-  }
-  
-  .nav-link:hover{
-      color: #C7C9D9
-  }
-  
-  .dashboard{
-      padding-top: 77px;
-      padding-left: 20px;
-      padding-right: 20px;
-  }
-  
-  .h2-dashboard{
-      font-family: 'Poppins';
-      font-style: normal;
-      font-weight: 500;
-      font-size: 26px;
-      line-height: 39px;
-      letter-spacing: 0.01em;
-      color: #000000;
-      padding-bottom: 12px;
-  }
-  
-  .p-dashboard{
-      font-family: 'Poppins';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: 0.01em;
-      color: #BFBFBF;
-  }
-  
-  .table{
-      width: 1050px;
-      margin-top: 53px;
-      border: 1px solid #BFBFBF;
-      text-align: center;
-  }
-  
-  .reservation{
-      background: #008E89;
-      text-align: center;
-  }
-  
-  .btn-details{
-      width: 130px;
-      height: 40px;
-      background: #F7CC74;
-      border-radius: 10px;
-      font-family: 'Poppins';
-      font-style: normal;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: 0.01em;
-      color: #FFFFFF;
-  }
-  
-  
-  .page-link{
-      color: #000000;
-  }
-    
-  .page-link:hover{
-      color: #000000;
-  }
-    
-  .pagination{
-      display: inline-block;
-      background: #F8F8F9;
-      border: 1px solid rgba(0, 0, 0, 0.3);
-      box-sizing: border-box;
-      border-radius: 10px;
-      width: 286px;
-      height: 55px;
-      padding-top: 13px;
-  }
-    
-  .pagination a {
-      float: center;
-      padding-left: 16px;
-      padding-right: 16px;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      text-decoration: none;
-      font-family: 'Poppins';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 27px;
-      letter-spacing: 0.01em;
-      color: #000000;
-  }
-    
-  .center {
-      text-align: center;
-      padding-top: 65px;
-      padding-bottom: 65px;
-  }
-  
-  .col-sm-12{
-      text-align: center;
-  }
+}
 
-  .accept{
-    color: #378C1A;
-    border:0px;
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    background: #f4f5fa;
+}
+
+.container-fluid {
+    padding-left: 0px;
+}
+
+.side-bar {
+    background: #ad8b73;
+    width: 296px;
+    padding-top: 27px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.logo {
+    width: 210px;
+    height: 55px;
+}
+
+.admin-name {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+    padding-top: 38px;
+    padding-bottom: 10px;
+}
+
+.p-admin {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+}
+
+.p-menu {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    color: #bfbfbf;
+    padding-top: 44px;
+    padding-bottom: 13px;
+}
+
+.nav-link {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+    padding-left: 0px;
+}
+
+.bi-calendar-week {
+    color: #ffffff;
+}
+
+.bi-house {
+    color: #ffffff;
+}
+
+.bi-door-open {
+    color: #ffffff;
+}
+
+.nav-link:hover {
+    color: #c7c9d9;
+}
+
+.dashboard {
+    padding-top: 77px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.h2-dashboard {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 39px;
+    letter-spacing: 0.01em;
+    color: #000000;
+    padding-bottom: 12px;
+}
+
+.p-dashboard {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #bfbfbf;
+}
+
+.table {
+    width: 1050px;
+    margin-top: 53px;
+    border: 1px solid #bfbfbf;
+    text-align: center;
+}
+
+.reservation {
+    background: #008e89;
+    text-align: center;
+}
+
+.btn-details {
+    width: 130px;
+    height: 40px;
+    background: #f7cc74;
+    border-radius: 10px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+}
+
+.page-link {
+    color: #000000;
+}
+
+.page-link:hover {
+    color: #000000;
+}
+
+.pagination {
+    display: inline-block;
+    background: #f8f8f9;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 286px;
+    height: 55px;
+    padding-top: 13px;
+}
+
+.pagination a {
+    float: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    color: #000000;
+}
+
+.center {
+    text-align: center;
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.col-sm-12 {
+    text-align: center;
+}
+
+.accept {
+    color: #378c1a;
+    border: 0px;
     border-color: #f4f5fa;
     background: #f4f5fa;
     text-decoration: underline;
-  }
+}
 
-  .accept:hover{
+.accept:hover {
     color: black;
-  }
+}
 
-  .delete{
-    border:0px;
+.delete {
+    border: 0px;
     border-color: #f4f5fa;
     background: #f4f5fa;
-    text-decoration: underline
-  }
+    text-decoration: underline;
+}
 
-  .delete:hover{
+.delete:hover {
     color: black;
-  }
+}
+
+.bukti {
+    width: 50%;
+}
