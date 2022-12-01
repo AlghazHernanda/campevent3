@@ -42,6 +42,11 @@
                                 </button>Requested Event</a>
                         </li>
                         <li class="nav-item">
+                            <a href="/requestpayment" class="nav-link"><button class="btn">
+                                    <p class="bi bi-cash fs-4"></p>
+                                </button>Payment</a>
+                        </li>
+                        <li class="nav-item">
                             <form action="/logout" method="post">
                                 @csrf
                                 <a class="nav-link"><button class="btn">
