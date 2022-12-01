@@ -121,7 +121,7 @@ class DasboardEventController extends Controller
         return view('eventdetail', [
             'event' => $event,
             'eventType' => $eventType,
-            'event_type_name' => $event_type_name
+
         ]);
     }
 
