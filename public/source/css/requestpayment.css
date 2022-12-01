@@ -171,7 +171,7 @@ body {
 }
 
 .table {
-    width: 1050px;
+    width: 100%;
     margin-top: 53px;
     border: 1px solid #bfbfbf;
     text-align: center;

@@ -14,62 +14,61 @@
             return $tanggal . ' ' . $bulanIndo[abs($bulan)] . ' ' . $tahun;
         }
     @endphp
-    <div class="dashboard col container">
-        <div class="dashboard">
-            <h2 class="h2-dashboard">Payment</h2>
-            <p class="p-dashboard">You can accept or decline payment.</p>
-            <table class="table table-bordered">
-                <thead class="reservation">
+
+    <div class="dashboard">
+        <h2 class="h2-dashboard">Payment</h2>
+        <p class="p-dashboard">You can accept or decline payment.</p>
+        <table class="table table-bordered">
+            <thead class="reservation">
+                <tr>
+                    <th>No</th>
+                    <th>Nama Lengkap</th>
+                    <th>Tiket yang dibeli</th>
+                    <th>Email</th>
+                    <th>Bukti Pembayaran</th>
+                    <th>status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            @foreach ($payments as $payment)
+                <tbody>
                     <tr>
-                        <th>No</th>
-                        <th>Nama Lengkap</th>
-                        <th>Tiket yang dibeli</th>
-                        <th>Email</th>
-                        <th>Bukti Pembayaran</th>
-                        <th>status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                @foreach ($payments as $payment)
-                    <tbody>
-                        <tr>
-                            <td>{{ $loop->iteration }}</td>
-                            <td>{{ $payment->name }}</td>
-                            <td>{{ $payment->event_title }}</td>
-                            <td>{{ $payment->email }}</td>
-                            {{-- untuk stagging --}}
-                            {{-- catatan, kalau php storage link error, delete dulu storage di publik dan post-images di storage, lalu
+                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $payment->name }}</td>
+                        <td>{{ $payment->event_title }}</td>
+                        <td>{{ $payment->email }}</td>
+                        {{-- untuk stagging --}}
+                        {{-- catatan, kalau php storage link error, delete dulu storage di publik dan post-images di storage, lalu
                         php artisan storage:link --}}
-                            <td>
-                                {{-- <img src="{{ asset('storage/' . $payment->image) }}" class="" alt="image" /></td> --}}
-                                <img src="{{ url("/images/{$payment->image}") }}" class="bukti" alt=" " />
-                            <td>{{ $payment->status }}</td>
-                            <td>
-                                <div class="action row">
-                                    <div class="col-sm">
-                                        <form action="/requestpayment/{{ $payment->id }}" method="POST" class="d-inline">
-                                            @method('put')
-                                            @csrf
-                                            <button class="accept">Accept</button>
-                                            {{-- <a href="#" class="accept">Accept<a></a> --}}
-                                        </form>
+                        <td>
+                            {{-- <img src="{{ asset('storage/' . $payment->image) }}" class="" alt="image" /></td> --}}
+                            <img src="{{ url("/images/{$payment->image}") }}" class="bukti" alt=" " />
+                        <td>{{ $payment->status }}</td>
+                        <td>
+                            <div class="row">
+                                <div class="col-5">
+                                    <form action="/requestpayment/{{ $payment->id }}" method="POST" class="d-inline">
+                                        @method('put')
+                                        @csrf
+                                        <button class="btn btn-success">Accept</button>
+                                        {{-- <a href="#" class="accept">Accept<a></a> --}}
+                                    </form>
 
-                                    </div>
-                                    <div class="col-sm">
-                                        <form action="/declinepayment/{{ $payment->id }}" method="POST" class="d-inline">
-                                            @method('put')
-                                            @csrf
-                                            <button class="delete">Decline</button>
-                                            {{-- <a href="#" class="accept">Accept<a></a> --}}
-                                        </form>
-                                        {{-- <a href="#" class="delete">Delete<a></a> --}}
-                                    </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                @endforeach
-            </table>
-
-        </div>
+                                </div>
+                                <div class="col-7">
+                                    <form action="/declinepayment/{{ $payment->id }}" method="POST" class="d-inline">
+                                        @method('put')
+                                        @csrf
+                                        <button class="btn btn-danger">Decline</button>
+                                        {{-- <a href="#" class="accept">Accept<a></a> --}}
+                                    </form>
+                                    {{-- <a href="#" class="delete">Delete<a></a> --}}
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            @endforeach
+        </table>
     </div>
 @endsection
