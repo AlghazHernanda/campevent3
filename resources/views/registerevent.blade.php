@@ -47,7 +47,7 @@
                                         style="margin-left: 35px;" data-bs-toggle="dropdown" aria-expanded="false">
                                         Select Theme
                                     </button>
-                                    
+
                                     {{-- <select name="sources" id="sources" class="form-select" placeholder="Select Theme">
                                         <option selected>Select Theme</option>
                                         @foreach ($eventTypes as $eventType)
@@ -150,7 +150,7 @@
                                 </h2>
                                 <div class="input-group">
                                     <i class="bi bi-telephone input-group-text"></i>
-                                    <input type="number"
+                                    <input type="text"
                                         class="datepicker form-control @error('no_hp') is-invalid @enderror"
                                         name="no_hp" placeholder="08XXXXXXXXXX">
                                     @error('no_hp')
