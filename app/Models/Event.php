@@ -50,6 +50,13 @@ class Event extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
+    public function event_type_byEvent()
+    {
+        //relasi one to one
+        //namanya jadi author, dan mengambil user id
+        return $this->belongsTo(EventType::class, 'eventType');
+    }
+
     public function love()
     {
         //relasi many to many
