@@ -28,7 +28,7 @@ class EventFactory extends Factory
             'desc' => collect($this->faker->paragraphs(mt_rand(5, 10)))
                 ->map(fn ($p) => "<p>$p</p>")
                 ->implode(''),
-            'user_id' => mt_rand(1, 4),
+            'user_id' => mt_rand(1, 3),
             'category_id' => mt_rand(1, 3),
             'status' => $status,
             'no_hp' => $this->faker->randomNumber(9, true)

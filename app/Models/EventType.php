@@ -16,4 +16,10 @@ class EventType extends Model
         // 1 katerogi bisa dimiliki oleh banyak post
         return $this->hasMany(Event::class);
     }
+
+    public function event_type_byEventType()
+    {
+        // 1 katerogi bisa dimiliki oleh banyak post
+        return $this->hasMany(Event::class);
+    }
 }

@@ -109,9 +109,19 @@ class DasboardEventController extends Controller
      */
     public function show(Event $event, EventType $eventType)
     {
+        //catatan join table manual 
+        // $event_type_name = $event::join('event_types', 'events.eventType', '=', 'event_types.id')
+        //     ->get(['events.*', 'event_types.name']);
+
+        // ddd($event_type_name);
+
+        //agar bisa dipanggil diview, sudah di join table lewat model
+        $event_type_name = Event::find(1);
+
         return view('eventdetail', [
             'event' => $event,
-            'eventType' => $eventType
+            'eventType' => $eventType,
+
         ]);
     }
 

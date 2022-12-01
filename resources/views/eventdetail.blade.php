@@ -42,7 +42,7 @@
                     </div>
                     <div class="col-sm">
                         <div class="event">
-                                <div class="status-event">{{ $event->eventType }}</div>
+                                <div class="status-event">{{ $event->event_type_byEvent->name }}</div>
                             {{-- <div class="">Free</div> --}}
                         </div>
                     </div>

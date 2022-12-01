@@ -132,7 +132,7 @@
                                         <p class="bi bi-calendar-date">{{ convertDateDBtoIndo($event->date) }}</p>
                                     </div>
                                     <div class="col-sm-7">
-                                        {{-- <p class="bi bi-person-circle">{{ $event->author->fullname }}</p> --}}
+                                        <p class="bi bi-person-circle">{{ $event->author->fullname }}</p>
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
