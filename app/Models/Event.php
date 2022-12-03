@@ -53,7 +53,7 @@ class Event extends Model
     public function event_type_byEvent()
     {
         //relasi one to one
-        //namanya jadi author, dan mengambil user id
+        //namanya jadi event_type_byEvent, dan mengambil eventType
         return $this->belongsTo(EventType::class, 'eventType');
     }
 
