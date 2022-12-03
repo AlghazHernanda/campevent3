@@ -41,8 +41,9 @@
                     <input type="hidden" class="form-control @error('event_title') is-invalid @enderror" name="event_date"
                         id="date" value="{{ $event->date }}">
 
-                    <input type="text" class="form-control @error('event_title') is-invalid @enderror" name="event_title"
-                        id="event_title" value="{{ $event->title }}" disabled>
+                    <input type="hidden" class="form-control @error('event_title') is-invalid @enderror" name="event_title"
+                        id="event_title" value="{{ $event->title }}">
+                    <p class="rekening">{{ $event->title }}</p>
                     @error('event_title')
                         <div class="invalid-feedback">
                             {{ $message }}
