@@ -40,6 +40,7 @@ class Event extends Model
     public function eventTypeTo()
     {
         //relasi one to one
+        //namanya jadi eventTypeTo, dan mengambil category_id
         return $this->belongsTo(EventType::class, 'category_id');
     }
 
