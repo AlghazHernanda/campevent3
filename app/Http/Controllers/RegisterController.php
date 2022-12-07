@@ -156,6 +156,8 @@ class RegisterController extends Controller
             //     Storage::delete($request->oldImage);
             // }
             //$image = $request->file('image')->store('post-images'); //maka simpan di dalam post-images
+
+            //heroku production
             $filename = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $request->file('image')->getClientOriginalName());
             $request->file('image')->move(public_path('images'), $filename);
         }
