@@ -52,17 +52,17 @@ class PaymentController extends Controller
         $validatedData['user_id'] = auth()->user()->id;
 
         //untuk stagging, sebelum deploy
-        // if ($request->file('image')) {
-        //     $validatedData['image'] = $request->file('image')->store('post-images'); //maka simpan di dalam storage/app/post-images
-        // }
-
-        //heroku production
-        if ($request->hasfile('image')) {
-            $filename = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $request->file('image')->getClientOriginalName());
-            $request->file('image')->move(public_path('images'), $filename);
+        if ($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('post-images'); //maka simpan di dalam storage/app/post-images
         }
 
-        $validatedData['image'] = $filename;
+        //heroku production
+        // if ($request->hasfile('image')) {
+        //     $filename = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $request->file('image')->getClientOriginalName());
+        //     $request->file('image')->move(public_path('images'), $filename);
+        // }
+
+        //$validatedData['image'] = $filename;
         //dd($validatedData);
 
         Payment::create($validatedData);
