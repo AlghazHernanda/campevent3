@@ -78,15 +78,18 @@ class DasboardEventController extends Controller
         //$validatedData['eventTheme'] = serialize($request['eventTheme']);
 
         //jika ada gambar yang di upload
-        // if ($request->file('image')) {
-        //     $validatedData['image'] = $request->file('image')->store('post-images'); //maka simpan di dalam storage/app/post-images
-        // }
-        if ($request->hasfile('image')) {
-            $filename = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $request->file('image')->getClientOriginalName());
-            $request->file('image')->move(public_path('images'), $filename);
+        if ($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('post-images'); //maka simpan di dalam storage/app/post-images
         }
 
-        $validatedData['image'] = $filename;
+        //heroku production
+        // if ($request->hasfile('image')) {
+        //     $filename = round(microtime(true) * 1000) . '-' . str_replace(' ', '-', $request->file('image')->getClientOriginalName());
+        //     $request->file('image')->move(public_path('images'), $filename);
+        // }
+        // $validatedData['image'] = $filename;
+
+
         $validatedData['user_id'] = auth()->user()->id;
         $validatedData['category_id'] = $validatedData['eventType'];
         //$validatedData['published_at'] = $validatedData['created_at'];
