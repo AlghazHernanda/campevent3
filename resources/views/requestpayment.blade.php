@@ -41,8 +41,11 @@
                         {{-- catatan, kalau php storage link error, delete dulu storage di publik dan post-images di storage, lalu
                         php artisan storage:link --}}
                         <td>
-                            {{-- <img src="{{ asset('storage/' . $payment->image) }}" class="" alt="image" /></td> --}}
-                            <img src="{{ url("/images/{$payment->image}") }}" class="bukti" alt=" " />
+                            
+                            <img src="{{ asset('storage/' . $payment->image) }}" class="" alt="image" /></td>
+
+                            {{-- versi production --}}
+                            {{-- <img src="{{ url("/images/{$payment->image}") }}" class="bukti" alt=" " /> --}}
                         <td>{{ $payment->status }}</td>
                         <td>
                             <div class="row">
