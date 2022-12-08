@@ -60,11 +60,6 @@ p {
     margin: 0;
 }
 
-.header {
-    padding-left: 40px;
-    padding-right: 40px;
-}
-
 .h1-header {
     font-family: "Poppins";
     font-style: normal;
@@ -78,7 +73,7 @@ p {
 }
 
 .hr {
-    width: 1358px;
+    width: 100%;
     border: 1px solid #000000;
     margin-bottom: 37px;
 }
@@ -99,8 +94,8 @@ p {
 
 .desc {
     text-align: center;
-    padding-left: 500px;
-    padding-right: 500px;
+    padding-left: 450px;
+    padding-right: 450px;
 }
 
 .text {
@@ -338,4 +333,10 @@ p {
     margin-left: 20px;
     margin-top: 5px;
     color: white;
+}
+
+@media (max-width: 768px) {
+    .hr {
+        width: 100vh;
+    }
 }

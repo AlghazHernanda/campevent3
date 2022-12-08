@@ -22,48 +22,51 @@
             <img src="{{ url("/images/{$event->image}") }}" class="ifest" alt=" " />
         </div>
 
-
-        <h2 class="h2-text" style="padding-top: 25px; padding-bottom: 25px; text-align: center;">{{ $event->title }}</h2>
-        {{-- <div class="row desc">
-                <div class="col-4 col-sm">
-                    <div class="row text">
-                        {{-- @for ($i = 0; $i < 2; $i++)
+        <div class="techno">
+            <div>
+                <h2 class="h2-text" style="padding-top: 25px; padding-bottom: 25px; text-align: center;">{{ $event->title }}
+                </h2>
+                <div class="row desc">
+                    <div class="col-sm">
+                        <div class="row text">
+                            @for ($i = 0; $i < 2; $i++)
                                 <div class="col status">{{ $event->eventTheme[$i] }}</div>
                             @endfor
-                        <div class="col status">{{ $event->eventTheme[1] }}</div>
-                        <div class="eventtype">{{ $event->eventTheme[0] }}</div>
+                            <div class="col status">{{ $event->eventTheme[1] }}</div>
+                            <div class="eventtype">{{ $event->eventTheme[0] }}</div>
 
-                            {{-- <div class="col info">online</div> 
+                            {{-- <div class="col info">online</div> --}}
+                        </div>
                     </div>
-                </div> 
-            </div> --}}
-        <div class="col-4 col-sm">
-            <div class="event">
-                <div class="status-event">{{ $event->event_type_byEvent->name }}</div>
-                {{-- <div class="">Free</div> --}}
-            </div>
-        </div>
+                    <div class="col-sm">
+                        <div class="event">
+                            <div class="status-event">{{ $event->event_type_byEvent->name }}</div>
+                            {{-- <div class="">Free</div> --}}
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <form action="/eventdetail/{{ $event->id }}" method="post">
+                            @csrf
+                            <button class="btn btn-love"><i class="bi bi-heart-fill fs-4"></i></button>
+                        </form>
+                    </div>
 
-        <div class="col-4 col-sm">
-            <form action="/eventdetail/{{ $event->id }}" method="post">
-                @csrf
-                <button class="btn btn-love"><i class="bi bi-heart-fill fs-4"></i></button>
-            </form>
-        </div>
-
-        <div class="row justify-content-center">
-            <div class="col-4">
-                <div class="status">{{ $event->eventTheme[1] }}</div>
-                <div class="eventtype">{{ $event->eventTheme[0] }}</div>
-            </div>
-            <div class="col-4">
-                <div class="status-event">{{ $event->eventType }}</div>
-            </div>
-            <div class="col-4">
-                <form action="/eventdetail/{{ $event->id }}" method="post">
-                    @csrf
-                    <button class="btn btn-love"><i class="bi bi-heart-fill fs-4"></i></button>
-                </form>
+                    {{-- <div class="row justify-content-center">
+                    <div class="col-4">
+                        <div class="status">{{ $event->eventTheme[1] }}</div>
+                        <div class="eventtype">{{ $event->eventTheme[0] }}</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="status-event">{{ $event->eventType }}</div>
+                    </div>
+                    <div class="col-4">
+                        <form action="/eventdetail/{{ $event->id }}" method="post">
+                            @csrf
+                            <button class="btn btn-love"><i class="bi bi-heart-fill fs-4"></i></button>
+                        </form>
+                    </div>
+                    </div> --}}
+                </div>
             </div>
         </div>
 
