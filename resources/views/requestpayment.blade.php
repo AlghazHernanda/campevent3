@@ -42,7 +42,7 @@
                         php artisan storage:link --}}
                         <td>
                             
-                            <img src="{{ asset('storage/' . $payment->image) }}" class="" alt="image" /></td>
+                            <img src="{{ asset('storage/' . $payment->image) }}" class="" alt="image" />
 
                             {{-- versi production --}}
                             {{-- <img src="{{ url("/images/{$payment->image}") }}" class="bukti" alt=" " /> --}}
