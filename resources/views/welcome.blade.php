@@ -119,7 +119,11 @@
                     <div class="col">
                         <div class="card">
                             <div class="photo">
-                                <img src="{{url("/images/{$event->image}")}}" class="ifest" alt=" " />
+                                {{-- versi stagging --}}
+                                <img src="{{ asset('storage/' .$event->image) }}" class="" alt="image" /></td>
+
+                                {{-- versi production --}}
+                                {{-- <img src="{{url("/images/{$event->image}")}}" class="ifest" alt=" " /> --}}
                                 <div class="row text-card">
                                     @for ($i = 0; $i < 2; $i++)
                                         <div class="col status-card">{{ $event->eventTheme[$i] }}</div>
