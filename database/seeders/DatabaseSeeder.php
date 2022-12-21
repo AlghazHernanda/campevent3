@@ -76,6 +76,6 @@ class DatabaseSeeder extends Seeder
             'slug' => 'sport'
         ]);
 
-        Event::factory(20)->create();
+        // Event::factory(20)->create();
     }
 }
